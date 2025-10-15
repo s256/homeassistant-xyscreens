@@ -52,7 +52,7 @@ async def async_setup_entry(
         # Network connection: build host:port string
         host = config_entry.data.get(CONF_HOST)
         port = config_entry.data.get(CONF_PORT)
-        connection_string = f"{host}:{port}"
+        connection_string = f"{host}:{int(port)}"  # Convert float to int
     else:
         # Serial connection: use serial port path
         connection_string = config_entry.data.get(CONF_SERIAL_PORT)

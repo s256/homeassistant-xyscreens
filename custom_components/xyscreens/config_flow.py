@@ -287,7 +287,7 @@ class XYScreensConfigFlow(ConfigFlow, domain=DOMAIN):
             if not port or port < 1 or port > 65535:
                 errors[CONF_PORT] = "invalid_port"
 
-            connection_string = f"{host}:{port}"
+            connection_string = f"{host}:{int(port)}"  # Convert float to int
 
             # Test if we can connect to the TCP endpoint
             if not errors.get(CONF_HOST) and not errors.get(CONF_PORT):
