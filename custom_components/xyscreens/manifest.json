@@ -10,10 +10,10 @@
   "iot_class": "assumed_state",
   "issue_tracker": "https://github.com/rrooggiieerr/homeassistant-xyscreens/issues",
   "loggers": [
-  	"xyscreens"
+    "xyscreens"
   ],
   "requirements": [
-    "git+https://github.com/s256/xyscreens.py.git"
+    "xyscreens @ git+https://github.com/s256/xyscreens.py.git@main"
   ],
   "version": "1.1.0"
 }
